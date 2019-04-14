@@ -1,0 +1,2 @@
+CREATE DATABASE IF NOT EXISTS db_log;
+USE db_log;
