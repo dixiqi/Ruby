@@ -1,0 +1,15 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  id: 
+  name: 
+  content: MyText
+  price: 1
+  count: 1
+
+two:
+  id: 
+  name: 
+  content: MyText
+  price: 1
+  count: 1

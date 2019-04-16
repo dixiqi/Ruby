@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+<div class="crumb_nav"> <a href="/">首页</a> &gt;&gt;查看购物车信息 </div>
+<h2><img src="/imgs/bullet1.gif" />我的购物车</h2>
+<div class="feat_prod_box_details">
+  <table class="cart_table">
+    <tr class="cart_title">
+      <td>封面图片</td>
+      <td>图书名称</td>
+      <td>价格</td>
+      <td>数量</td>
+      <td>总价</td>
+    </tr>
+    <% @books.each do |book| %>
+    <tr>
+      <td><a href="#"><img src="/pics/<%= book.id%>.jpg"  border="0" class="cart_thumb" /></a></td>
+      <td><%= book.name %></td>
+      <td>￥<%= book.price %></td>
+      <td>2</td>
+      <td>￥<%= book.price*2 %></td>
+    </tr>
+    <% end %>
+  </table>
+  <a href="#" class="continue">&lt; 继续购物</a>   <%= link_to '去收银台', {:controller=>'cart',:action=>'checkout'},:class=>:checkout %> </div>
+&nbsp;&nbsp;<%= link_to '返回列表', books_path %> | <%= link_to '查看第一条购物信息', {:controller=>'cart',:action=>'first'} %>

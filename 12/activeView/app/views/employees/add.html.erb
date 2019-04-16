@@ -1,0 +1,28 @@
+<h1><strong>添加新员工</strong></h1>
+<table>
+<% form_for(@employee) do |f| %>
+  <tr><td align="right">
+    <%= f.label :姓名： %></td>
+    <td><%= f.text_field :name %></td>
+  <td align="right">
+    <%= f.label :性别： %></td>
+    <td><%= f.radio_button :sex ,"男",:checked=>"checked"%>男 <%= f.radio_button :sex ,"女"%>女</td></tr>
+  <tr><td align="right">
+    <%= f.label :简历： %></td>
+    <td colspan="3"><%= f.text_area :jianli ,:size=>"45x5"%></td></tr>
+  <tr><td align="right">
+    <%= f.label :是否已婚： %></td>
+    <td colspan="3"><%= f.check_box :yihun ,{},"已婚","未婚"%>已婚（如果未婚请不要选择）</td></tr>
+  <tr><td align="right">
+    <%= f.label :个人爱好： %></td>
+    <td colspan="3"><%= f.text_area :aihao ,:size=>"45x5"%></td></tr>
+  <tr><td></td><td colspan="3">
+    <%= f.submit '提交并保存' %></td></tr>
+  </p>
+<% end %>
+</table>
+<%= link_to '返回', employees_path %>
+
+<%
+
+%>

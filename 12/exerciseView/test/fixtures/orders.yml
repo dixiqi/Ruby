@@ -1,0 +1,17 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  id: 
+  bookname: 
+  starttime: 2011-02-12 11:10:21
+  endtime: 2011-02-12 11:10:21
+  state: 
+  comment: MyText
+
+two:
+  id: 
+  bookname: 
+  starttime: 2011-02-12 11:10:21
+  endtime: 2011-02-12 11:10:21
+  state: 
+  comment: MyText

@@ -1,0 +1,45 @@
+<style type="text/css"  >
+  table
+{
+  margin:auto;
+  border: solid 1px #e8eef4;
+  border-collapse: collapse;
+}
+
+table td
+{
+	padding: 5px;
+	border: 1px solid #316AC5;
+}
+
+table th
+{
+	padding: 6px 5px;
+	text-align: left;
+	background-color: #9097A9;
+	border: solid 1px #316AC5;
+    color:#FFFFFF;
+}
+
+</style>
+<h1>查看所有图书</h1>
+<table width="480">
+  <tr>
+    <th>编号</th>
+    <th>图书名称</th>
+    <th>价格</th>
+    <th>数量</th>
+    <th>操作</th>
+  </tr>
+  <% @books.each do |book| %>
+  <tr style='background:<%= cycle("#ECECEC","#FFFFFF")  %>'>
+    <td><%=number_to_currency( book.id, :unit => "NO.", :format => "%u %n",:precision => 0) %></td>
+    <td><%= book.name %></td>
+    <td><%= number_to_currency(book.price, :unit => "￥", :separator => ".", :delimiter => ",") %></td>
+    <td><%= number_to_currency(book.count, :unit => "个", :format => "%n %u") %></td>
+    <td><%= link_to '查看', book %></td>
+  </tr>
+  <% end %>
+</table>
+<%= link_to '添加一本新书', new_book_path %>
+

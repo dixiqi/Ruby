@@ -1,0 +1,49 @@
+默认格式：<%=number_to_currency(1234567890.10) %><br/>
+四舍五入：<%=number_to_currency(1234567890.106) %><br/>
+指定精确度：<%=number_to_currency(1234567890.106, :precision => 1) %><br/>
+美元格式1：<%=number_to_currency(1234567890.10, :unit => "$", :format => "%n %u") %><br/>
+美元格式2：<%=number_to_currency(1234567890.10, :unit => "美元", :format => "%n %u") %><br/>
+人民币格式1：<%=number_to_currency(1234567890.10, :unit => "￥", :separator => ".", :delimiter => ",") %><br/>
+人民币格式2：<%=number_to_currency(1234567890.10, :unit => "元", :separator => ".", :delimiter => " ", :format => "%n %u") %><br/>
+
+<hr/>
+<li><strong>number_to_human_size方法：</strong></li><br/>
+<%=number_to_human_size(500)    %><br/>
+<%=number_to_human_size(5000)  %><br/>
+<%=number_to_human_size(543210)  %><br/>
+<%=number_to_human_size(55432100)   %><br/>
+<%=number_to_human_size(555433221000)  %><br/>
+<%=number_to_human_size(554332100, :precision => 2)    %><br/>
+<%=number_to_human_size(554332100, :precision => 0)   %><br/>
+<%=number_to_human_size(554332100, :precision => 2, :separator => ',') %><br/>
+
+
+<hr/>
+      <%= number_to_percentage(100)              %><br/>
+      <%= number_to_percentage(100, :precision => 0)         %><br/>
+      <%= number_to_percentage(1000, :delimiter => '.', :separator => ',')  %><br/>
+      <%= number_to_percentage(302.2439823, :precision => 5)      %><br/>
+<hr/>
+<%= number_to_phone(2088062500)   %><br/>
+<%= number_to_phone(2088062500)  %><br/>
+<%= number_to_phone(2088062500, :area_code => true)  %><br/>
+<%= number_to_phone(2088062500, :delimiter => " ")   %><br/>
+<%= number_to_phone(2088062500, :area_code => true, :extension => 110)  %><br/>
+<%= number_to_phone(2088062500, :country_code => 86)    %><br/>
+<%= number_to_phone(2088062500, :country_code => 86, :extension => 501, :delimiter => ".")  %><br/>
+
+<hr/>
+<%=number_with_delimiter(12345678)%><br/>
+<%=number_with_delimiter(12345678.05)  %><br/>
+<%=number_with_delimiter(12345678, :delimiter => ".")  %><br/>
+<%=number_with_delimiter(12345678, :separator => ",")  %><br/>
+<%=number_with_delimiter(98765432.98, :delimiter => " ", :separator => ",") %><br/>
+<hr/>
+<%=number_with_precision(111.2345)  %><br/>
+<%=number_with_precision(111.2345, :precision => 2)    %><br/>
+<%=number_with_precision(13, :precision => 5)    %><br/>
+<%=number_with_precision(389.32314, :precision => 0)  %><br/>
+<%=number_with_precision(111.2345, :precision => 1, :significant => true)  %><br/>
+<%=number_with_precision(1111.2345, :precision => 2, :separator => ',', :delimiter => '.')%><br/>
+
+

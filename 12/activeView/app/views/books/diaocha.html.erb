@@ -1,0 +1,45 @@
+<%= form_tag('/books') do -%>
+    <table width="95%" align="center" cellpadding="5" cellspacing="1" >
+        <tr height=20>
+          <th  >用 户 调 查 表 单</th>
+        </tr>
+        <tr>
+          <td ><%= label_tag '用户名：' %><%= text_field_tag 'nameIpt', '窗内网', :size => 20 %>
+            <%= label_tag '密  码：' %> <%=password_field_tag 'passIpt', 'itZcn.com', :size => 20 %></td>
+        </tr>
+        <tr>
+          <td>常去网站：<%= check_box_tag 'csdn','csdn' %>CSDN&nbsp;&nbsp;
+            <%= check_box_tag 'msdn','msdn', true %>MSDN&nbsp;&nbsp;
+            <%= check_box_tag 'xinwen','xinwen' %>新闻网&nbsp;&nbsp;
+            <%= check_box_tag 'ccw','ccw' %>计世网&nbsp;&nbsp;
+            <%= check_box_tag 'jiaocheng','jiaocheng', true  %>教程网&nbsp;&nbsp;
+        </tr>
+        <tr>
+          <td>默认搜索：<%= radio_button_tag 'baidu', '', true %>baidu&nbsp;&nbsp;
+            <%= radio_button_tag 'google', '' %>google&nbsp;&nbsp;
+            <%= radio_button_tag 'yahoo', '' %>yahoo&nbsp;&nbsp;
+            <%= radio_button_tag 'MSN', '' %>MSN&nbsp;&nbsp;
+            <%= radio_button_tag 'baidu', '' %>baidu&nbsp;&nbsp;
+        </tr>
+        <tr>
+          <td valign="top">掌握技能：
+            <%= select_tag "select1", options_for_select({"前台Web设计"=>"red","网站优化与推广"=>"blue","ASP.NET网站开发"=>"white","客户端编程"=>"black","DIV+CSS"=>"black"}), :multiple => 'multiple' %>
+            最想了解的技术：
+            <%= select_tag "select2", options_for_select({"jQuery开发"=>"red",".NET框架"=>"blue","设计模式"=>"white","sql数据库"=>"black","网络通信"=>"black"}) %>
+          </td>
+        </tr>
+        <tr>
+          <td valign="top">简单描述：<br>
+            <%= text_area_tag 'more', '网站:www.itzcn.com', :rows => 2, :cols => 50 %>
+          </td>
+        </tr>
+        <tr>
+          <td><%= image_submit_tag("btn_submit.gif") %>
+
+
+        </tr>
+      </table><%= image_submit_tag("dl.gif") %><%= image_submit_tag("tj.gif") %>
+
+
+<% end -%>
+

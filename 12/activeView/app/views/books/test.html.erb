@@ -1,0 +1,23 @@
+<style type="text/css">
+  td{
+      width:160px;
+      font-size:12px;
+      border:1px solid #ebebeb;
+  }
+</style>
+<%= image_tag "/uploads/hot1.jpg",:mouseover => image_path("/uploads/hot2.jpg") %>
+<%= image_tag "/uploads/new1.jpg",:mouseover => image_path("/uploads/new2.jpg") %>
+<%= image_tag "/uploads/yudi1.jpg",:mouseover => image_path("/uploads/yudi2.jpg") %>
+<table>
+  <tr>
+    <% @books.each do |book| %>
+    <td  align="center"><%= image_tag  book.id.to_s+".jpg",:size=>"100x140" ,:title=>book.name %> <br/>
+      <%= book.name %></td>
+    <% end %>
+  </tr>
+</table>
+<p>【友情连接】
+  <%= image_tag "logo.jpg",:alt=>"汇智科技",:size=>"100x40" ,:title=>'汇智科技' ,:border=>'1'%>
+  <%= image_tag "logo.gif",:alt=>"窗内网",:size=>"100x40",:title=>'窗内网' ,:border=>'1' %>
+</p>
+

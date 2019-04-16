@@ -1,0 +1,41 @@
+﻿<%= form_for(@order) do |f| %>
+  <% if @order.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@order.errors.count, "error") %> prohibited this order from being saved:</h2>
+
+      <ul>
+      <% @order.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :编号 %><br />
+    <%= f.text_field :id ,:value=>'主键不可修改',:disabled=>'disabled' %>
+  </div>
+  <div class="field">
+    <%= f.label :商品名称 %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :开始时间 %><br />
+    <%= f.datetime_select :starttime %>
+  </div>
+  <div class="field">
+    <%= f.label :终止时间 %><br />
+    <%= f.datetime_select :endtime ,:default => 3.days.from_now%>
+  </div>
+  <div class="field">
+    <%= f.label :当前状态 %><br />
+    <%= f.radio_button :state ,"1",:checked=>"checked"%>已付款 <%= f.radio_button :state ,"2"%>已发货 <%= f.radio_button :state ,"3"%>确定收货<%= f.radio_button :state ,"4"%>双方评价<%= f.radio_button :state ,"5"%>结束交易
+  </div>
+  <div class="field">
+    <%= f.label :备注 %><br />
+    <%= f.text_area :comment ,:rows => 6, :cols => 50 %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,56 @@
+<table width="100%" cellpadding="0" cellspacing="0" border="1">
+   <tr>
+     <td colspan="2" style="font-weight:bolder;"><strong>日期-</strong>select_date方法：</td>
+   </tr><tr>
+     <td><%= select_date() %></td>				<!—创建日期-->
+     <td><%= select_date(Time.now + 6.days) %></td>
+   </tr><tr>
+     <td colspan="2" style="font-weight:bolder;">日期/时间-select_datetime方法：</td>
+   </tr><tr>
+     <td><%= select_datetime() %></td>
+     <td><%= select_datetime(Time.now + 6.days,
+                                        :date_separator => '--',
+                                        :time_separator => '',
+                                        :datetime_separator => '时间：') %></td>
+   </tr><tr>
+     <td colspan="2" style="font-weight:bolder;" >号-select_day方法：</td>
+   </tr><tr>
+     <td ><%= select_day(12) %></td>
+     <td><%= select_day(Time.now + 6.days,
+                      :field_name => 'due') %></td>
+   </tr><tr>
+     <td colspan="2" style="font-weight:bolder;" >小时-select_hour方法：</td>
+   </tr><tr>
+     <td><%= select_hour(5) %></td>
+     <td><%= select_hour(Time.now + 6.hours,
+                           :prompt =>'选择时间' ) %></td>
+   </tr><tr>
+     <td  style="font-weight:bolder;" colspan="2" >分钟-select_minute方法：</td>
+   </tr><tr>
+     <td><%= select_minute(15) %></td>
+     <td><%= select_minute(Time.now + 6.minutes) %></td>
+   </tr><tr>
+     <td colspan="2"  style="font-weight:bolder;">月份-select_month方法：</td>
+   </tr><tr>
+     <td><%= select_month (Date.today) %></td>
+     <td><%= select_month (Time.now + 30.days) %></td>
+   </tr><tr>
+     <td colspan="2"  style="font-weight:bolder;">秒-select_second方法：</td>
+   </tr><tr>
+     <td><%= select_second(Time.now) %></td>
+     <td><%= select_second(Time.now + 15.seconds) %></td>
+   </tr><tr>
+     <td colspan="2" style="font-weight:bolder;">时间-select_time方法：</td>
+   </tr><tr>
+     <td><%= select_time() %></td>
+     <td><%= select_time(Time.now + 15.seconds,:include_seconds => true) %></td>
+   </tr><tr>
+     <td colspan="2" style="font-weight:bolder;">年-select_year方法：</td>
+   </tr><tr>
+     <td><%= select_year(Time.now,:field_name => 'birth') %></td>
+     <td><%= select_year(2020, :start_year => 2000, :end_year => 2090) %></td>
+   </tr></table>
+
+<%=date_select(:people,:name)%>
+
+

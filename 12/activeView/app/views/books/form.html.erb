@@ -1,0 +1,73 @@
+
+<%= form_tag('/books') %>
+<%= form_tag('/books/1', :method => :put) %>
+<%= form_tag('/upload', :multipart => true) %>
+<%= form_tag('/books', :remote => true) %>
+<%= form_tag('/books') do -%>
+
+<% end -%>
+<%= label_tag '用户名' %><br/>
+<%= label_tag 'username', '请输入用户名' %><br/>
+<%= label_tag 'username', nil, :class => 'nameInput' %><br/>
+<hr/>
+
+<%=password_field_tag 'pwd1' %><br/>
+<%=password_field_tag 'pwd2', 'zhuhontao' %><br/>
+<%=password_field_tag 'pwd3', '', :size => 15 %><br/>
+<%=password_field_tag 'pwd4', nil, :maxlength => 16 %><br/>
+<%=password_field_tag 'pwd5', nil, :disabled => true %><br/>
+<%=password_field_tag 'pwd6', nil, :class => 'passwordInput' %><br/>
+<%=password_field_tag 'pwd7', 'zhht', :maxlength => 4, :size => 6, :class => "pin-input" %><br/>
+<hr/>
+
+
+<%= text_area_tag 'comment', nil, :rows => 4, :cols => 20 %>
+<%= text_area_tag 'comment', nil, :size => "20x4" %><br/>
+<%= text_field_tag 'comment', nil, :class => 'textInput' %><br/>
+<%= text_field_tag 'comment', '', :size => 20 %>
+<hr/>
+<%= submit_tag "编辑这条信息" %>
+<%= submit_tag "放弃修改", :disabled => true%>
+<%= submit_tag "提交", :class => "form_submit"%>
+<%=submit_tag "删除", :confirm => "确定要删除吗?"%>
+<%= image_submit_tag("login.jpg") %>
+<%= image_submit_tag("purchase.png", :disabled => true) %>
+<%= image_submit_tag("search.png", :class => 'search-button') %>
+<%= image_submit_tag("agree.png", :disabled => true, :class => "agree-disagree-button") %>
+<hr/>
+
+<%= hidden_field_tag 'action' %>
+<%= hidden_field_tag 'sessionid', 'EX4360EC651vBYTxnjt12'%>
+<%=hidden_field_tag 'menu_selectled', '', :onchange => "alert('暂无任何选择')"%>
+<hr/>
+<%= radio_button_tag 'man', '男' %>
+<%= radio_button_tag 'updateAll', '同步更新', true %>
+<%= radio_button_tag 'start', "开始运行", false, :disabled => true %>
+<%= radio_button_tag 'fontColor', "设置为红色", true, :class => "redInput" %>
+<hr/>
+<%= check_box_tag 'links' %>
+<%= check_box_tag 'isChange', '同意修改' %>
+<%= check_box_tag 'isDisable', '禁止使用', true %>
+<%= check_box_tag 'backgroundRun', '开启后台运行', false, :class => 'accept' %>
+<%= check_box_tag 'search', '模糊查找', true, :disabled => true %>
+<hr/>
+<%= select_tag "color1", options_for_select({"红色"=>"red"}) %>
+<%= select_tag "color2", options_for_select({"红色"=>"red","蓝色"=>"blue","白色"=>"white","黑色"=>"black"}) %>
+<%= select_tag "color3", options_for_select({"红色"=>"red","蓝色"=>"blue","白色"=>"white","黑色"=>"black"}, :multiple => true) %>
+<%= select_tag "color4", options_for_select({"红色"=>"red","蓝色"=>"blue","白色"=>"white","黑色"=>"black"},:default=>true) %>
+<%= select_tag "color5", options_for_select({"红色"=>"red","蓝色"=>"blue","白色"=>"white"}, :multiple => true), :class => 'form_input' %>
+<%= select_tag "color6", options_for_select({"红色"=>"red","蓝色"=>"blue","白色"=>"white"}), :disabled => true %>
+<hr/>
+
+<% container = [
+ ['生活','life'],['服装','ch'],['首饰'],['美食'],['购车']
+]%>
+
+
+<%= options_for_select(container) %>
+
+
+
+
+
+

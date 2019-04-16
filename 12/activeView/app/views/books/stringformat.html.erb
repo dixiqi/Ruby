@@ -1,0 +1,11 @@
+<%= auto_link("单击这里跳转到窗内网 http://www.itzcn.com") %><br/>
+<%= auto_link("窗内网官方网站 http://www.itzcn.com/ 或者 联系邮箱 itzcn@126.com", :link => :urls)%><br/>
+<%= auto_link("窗内网官方网站 http://www.itzcn.com/ 或者 联系邮箱 itzcn@126.com", :link => :email_addresses)%><br/>
+<%= auto_link "发邮件给窗内网 itzcn@126.com" %><br/>
+<hr/>
+<% @items = ['春天',"夏天",'秋天','冬天'] %>
+  <% @items.each do |item| %>
+    <div style='color:<%= cycle("red","")  %>'>
+      <%= item %>
+    </div>
+  <% end %>

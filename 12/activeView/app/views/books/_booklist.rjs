@@ -1,0 +1,16 @@
+﻿@books.each do|book|
+page.insert_html :bottom,"result",
+"      <ul class='thumbmsglist'>
+        <li>
+          <div>
+            <img src='images/#{book.int}.jpg' alt='玩具' />
+          </div>
+          <em class='smalltxt'>价格 <strong class='price'>#{book.price }</strong></em>
+          <h4> <span class='smalltxt' title='名称'>图书名称：#{book.bookname}</span></h4>
+          <p class='msgintro'>作者：#{ book.author}</p>
+          <p class='msginfo smalltxt'>.
+          </p>
+        </li>
+      </ul>"
+end
+page.visual_effect :highlight, 'result'

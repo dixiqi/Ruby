@@ -1,0 +1,36 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>窗内网－图书推荐</title>
+<%= stylesheet_link_tag "scaffold.css"  %>
+  <%= stylesheet_link_tag "style.css"  %>
+
+  <%= csrf_meta_tag %>
+</head>
+<body>
+<div id="container">
+  <div id="logo"><a href="#">打造一流IT学习乐园  推进无纸化教学进程</a></div>
+  <div id="menu"> <a href="#">首页</a> <a href="#">关于书店</a> <a href="#">新书列表</a> <a href="#">图书专辑</a> <a href="#">我的账号</a> <a href="#">用户注册</a> <a href="#">联系我们</a> <a href="#">人才招聘</a> </div>
+  <div id="main">
+    <div id="sidebar">
+      <h2>站内导航</h2>
+      <ul>
+        <li><a href="#">随便看看</a></li>
+        <li><a href="#">查看记录</a></li>
+        <li><a href="#">我的日志</a></li>
+        <li><a href="#">乐于分享</a></li>
+        <li><a href="#">群组列表</a></li>
+      </ul>
+    </div>
+    <div id="text"><%= yield %> </div>
+  </div>
+  <div id="footer">
+    <div id="menu_footer"> <a href="#">首页</a> | <a href="#">窗内首页</a> | <a href="#">在线学院</a> | <a href="#">交流论坛</a> | <a href="#">技术文档</a> | <a href="#">娱乐空间</a> | <a href="#">关于我们</a> | <a href="#">服务</a> | <a href="#">保密协议</a> | <a href="#">联系我们</a> </div>
+    <div id="left_footer">&copy; Copyright 2009 <b>www.itzcn.com</b></div>
+    <div id="right_footer">
+      版权所有 <a href="http://www.itzcn.com" title="Web Design"><strong>汇智科技</strong></a> </div>
+  </div>
+</div>
+</body>
+</html>
