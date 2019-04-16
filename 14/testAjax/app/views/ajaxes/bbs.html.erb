@@ -1,0 +1,10 @@
+<%= javascript_include_tag "bbs.js" %>
+
+<div id="bbs">
+  <%= link_to '刷新列表', "/ajaxes/online_user", :remote => true, :id => "refresh" %>
+  <ul id="user_list">
+  </ul>
+</div><div id="bbs_bottom"></div>
+
+
+

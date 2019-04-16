@@ -1,0 +1,21 @@
+
+#users{
+    background:url(../images/user_bg.jpg);
+    width:700px;
+    height:500px;
+    padding:110px 0 0 200px;
+}
+
+#users table {
+    background:#fff;
+    width:500px;
+}
+
+#users table thead td {
+    font-weight:600;
+    padding:3px;
+}
+
+#users table td{
+    background:#DEF0FA;
+}

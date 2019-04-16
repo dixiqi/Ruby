@@ -1,0 +1,12 @@
+body{
+    padding:0;
+    margin:0;
+}
+#time{
+    background:url(../images/time_bg.jpg);
+    height:600px;
+    width:1024px;
+    font-size:12px;
+    font-family:"宋体";
+    padding:91px 106px;
+}

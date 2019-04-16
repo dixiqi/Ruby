@@ -1,0 +1,23 @@
+
+#find{
+    padding:35px;
+}
+
+#find table{
+    width:100%;
+}
+
+#find table .line{
+    height:20px;
+    background:#ccc;
+}
+
+#find input{
+    height:20px;
+    font-size:15px;
+}
+
+#result{
+    padding:20px;
+    line-height:30px;
+}

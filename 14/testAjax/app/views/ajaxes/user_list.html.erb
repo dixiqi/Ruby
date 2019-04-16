@@ -1,0 +1,19 @@
+[
+<%
+   gap = false
+   @users.each do |item|
+   if(gap)
+%>,
+<%
+   else
+   gap = true
+   end
+%>  {
+       "LoginName" : "<%= item[:LoginName] %>",
+       "Password" : "<%= item[:Password] %>",
+       "UserName" : "<%= item[:UserName] %>"
+    }
+<%
+   end
+%>
+]

@@ -1,0 +1,25 @@
+
+#bbs{
+    background:url(../images/itzcn_bg.jpg);
+    width:1000px;
+    margin:0;
+    padding:1870px 0 0 40px;
+}
+
+#user_list{
+    width:800px;
+}
+
+#user_list li{
+    display:inline;
+    padding:0 0 0 25px;
+    margin:0 10px;
+    height:45px;
+    background:url(../images/online_member.gif);
+    background-repeat:no-repeat;
+}
+
+#bbs_bottom{
+    background:url(../images/itzcn_bottom.jpg);
+    height:200px;
+}

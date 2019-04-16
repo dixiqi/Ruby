@@ -1,0 +1,13 @@
+$(document).ready(function(){
+	$.ajax({
+		type:'GET',
+		url:'http://localhost:3000/ajaxes/source',
+		success:function(reqContent)
+		{
+			$("#source").text(reqContent);
+		},
+        error:function(xhr,r,e){
+               alert(e);
+        }
+    });
+});

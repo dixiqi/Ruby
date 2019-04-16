@@ -1,0 +1,27 @@
+
+
+<div id="find">
+
+  <table>
+    <tr><% form_tag("/ajaxes/find", :remote => true, :id => "findForm") do %>
+      <td><img src="/images/itzcnLogo.jpg" alt="">
+        <input name="key">
+        <button type="search">搜索</button>
+      </td>
+       <% end %></tr>
+    <tr><td class="line"></td></tr>
+    <tr><td id="result">
+
+    </td></tr>
+  </table>
+
+</div>
+<script type="text/javascript">
+    $(function($) {
+        $('#findForm').bind(
+            'ajax:success',
+            function(data, status, xhr) {
+                $("#result").html(status);
+            });
+    });
+</script>

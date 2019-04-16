@@ -1,0 +1,26 @@
+<h1>Listing ajaxes</h1>
+<%= link_to  %>
+<br><br><br>
+<%= link_to '新建', "/ajaxes/res", :remote => true, :id => "new" %>
+<input id="ijn" />
+<script>
+  $(function($) {
+    $('#new').bind(
+            'ajax:success',
+            function(data, status, xhr) {
+                alert(status)
+            })
+  });
+</script>
+
+<% form_tag("/ajaxes/res", :remote => true, :id => "f1") do %>
+	<!-- 表单内容 -->
+<% end %>
+
+<script>
+  $(function($) {
+    $('#f1').bind('ajax:success', function(data, status, xhr) { alert(status) })
+            .bind('ajax:error', function(data, status, xhr) { alert('code 2')})
+  });
+</script>
+

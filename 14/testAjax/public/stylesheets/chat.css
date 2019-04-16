@@ -1,0 +1,25 @@
+#chat{
+    background:url(../images/chat_bg.jpg);
+    width:700px;
+    height:600px;
+    padding:65px 40px;
+}
+
+#messages{
+    width:410px;
+    height:330px;
+    link-height:20px;
+}
+
+#messages .name{
+    font-weight:700;
+}
+
+#messages .msg{
+    padding:0 10px 15px;
+}
+
+#messages .time{
+    color:#888;
+}
+

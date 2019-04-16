@@ -1,0 +1,13 @@
+<%= javascript_include_tag "login.js" %>
+
+<div id="itzcn">
+
+  <div id="login">
+    <% form_tag("/ajaxes/login", :remote => true, :id => "lf") do %>
+    <div>用户名：<%= text_field("user", "name", :class=>"input")  %></div>
+    <div>密　码：<%= password_field("user", "password", :class=>"input")  %></div>
+    <div><button type="submit">登录</button></div>
+    <% end %>
+  </div>
+
+</div>

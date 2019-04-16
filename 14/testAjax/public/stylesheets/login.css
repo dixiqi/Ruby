@@ -1,0 +1,25 @@
+#itzcn{
+    background:url(../images/itzcn_bg.jpg);
+    width:1007px;
+    height:1000px;
+    padding:190px 0 0 0;
+}
+
+#login{
+    margin:0 0 0 770px;
+    width:155px;
+    height:100px;
+}
+#login .input{
+    border:solid 1px #ccc;
+    width:90px;
+}
+
+#login div{
+    padding:5px 0;
+}
+
+#login div span{
+    color:red;
+}
+
