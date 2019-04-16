@@ -1,0 +1,11 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  id: 
+  name: 
+  ctime: 2011-01-19 15:30:28
+
+two:
+  id: 
+  name: 
+  ctime: 2011-01-19 15:30:28

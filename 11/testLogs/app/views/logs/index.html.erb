@@ -1,0 +1,29 @@
+﻿<h1>所有日志</h1>
+
+<table>
+  <tr>
+    <th>Id</th>
+    <th>标题</th>
+    <th>产生时间</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @logs.each do |log| %>
+  <tr>
+    <td><%= log.id %></td>
+    <td><%= log.name %></td>
+    <td><%= log.ctime %></td>
+    <td><%= link_to '详细记录', log %></td>
+    <td><%= link_to '更改', edit_log_path(log) %></td>
+    <td><%= link_to '删除', log, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<br />| <%= link_to '清空所有日志', {:controller=>'logs',:action=>'clearlog'} %>
+| <%= link_to '添加管理员',{:controller=>'users',:action=>'adduser'} %>
+| <%= link_to '我要登录',{:controller=>'users',:action=>:login} %>

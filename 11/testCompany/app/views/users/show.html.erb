@@ -1,0 +1,20 @@
+﻿<p id="notice"><%= notice %></p>
+
+<p>
+  <b>用户编号:</b>
+  <%= @user.id %>
+</p>
+<p>
+  <b>用户名称:</b>
+  <%= @user.name %>
+</p>
+<p>
+  <b>所在部门:</b>
+  <%= @user.department %>
+</p>
+<p>
+  <b>联系电话:</b>
+  <%= @user.phone %>
+</p>
+
+<%= link_to '返回', users_path %>
