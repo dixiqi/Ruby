@@ -1,0 +1,40 @@
+@charset "utf-8";
+
+body{
+	border:0;
+	margin:0;
+}
+
+#meal_card{
+	width:590px;
+	height:490px;
+	background:url(../images/meal_card_bg.jpg);
+	padding:110px 0 0 210px;
+}
+
+#meal_card table{
+	width:500px;
+	background:#2E5796;
+}
+
+#meal_card table td{
+	text-align:center;
+	border-collapse:0;
+	border-spacing:0;
+}
+
+#meal_card table thead td{
+	font-size:14px;
+	font-weight:700;
+	color:#2E5796;
+	background:#8af;
+	padding:5px;
+}
+
+#meal_card table tbody td{
+	font-size:13px;
+	color:#2E5796;
+	background:#fff;
+	padding:3px;
+}
+

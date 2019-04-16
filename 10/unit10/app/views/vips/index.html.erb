@@ -1,0 +1,23 @@
+<h1>Listing vips</h1>
+
+<table>
+  <tr>
+    <th>Id</th>
+    <th>Integral</th>
+    <th>User</th>
+    <th></th>
+  </tr>
+
+<% @vips.each do |vip| %>
+  <tr>
+    <td><%= vip.id %></td>
+    <td><%= vip.integral %></td>
+    <td><%= vip.user_id %></td>
+    <td><%= vip.user.name %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Vip', new_vip_path %>

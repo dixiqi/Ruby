@@ -1,0 +1,17 @@
+
+<%
+   def each_child(folder, level)
+       if(folder.nil? or folder.childs.nil?)
+           return;
+       end %>
+        <%= folder.name %><br>
+        <%
+       folder.childs.each do |f|   each_child(f, level+1);
+       end
+   end
+%>
+
+<% @folders.each do |f|
+    each_child(f, 0)
+   end
+%>

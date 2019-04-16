@@ -1,0 +1,15 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  id: 
+  number: 
+  student_id: 
+  sicherheit: 1.5
+  balance: 1.5
+
+two:
+  id: 
+  number: 
+  student_id: 
+  sicherheit: 1.5
+  balance: 1.5

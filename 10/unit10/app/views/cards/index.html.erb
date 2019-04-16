@@ -1,0 +1,43 @@
+
+
+<div id="bank">
+<table cellspacing="1">
+  <thead>
+  <tr>
+    <td>姓名</td>
+    <td>卡号</td>
+    <td>账户余额</td>
+  </tr>
+  </thead>
+  <tbody>
+<% @cards.each do |card| %>
+  <tr>
+    <td><%= card.name %></td>
+    <td><%= card.number %></td>
+    <td><%= card.money %></td>
+  </tr>
+<% end %>
+  </tbody>
+</table>
+
+<fieldset>
+<legend>用户转账</legend>
+  <%= form_for("/cards") do  %>
+  <div class="field">
+    转出账号：<input name="out" id="out" /><br />
+  </div>
+  <div class="field">
+    转入账号：<input name="in" id="in" /><br />
+  </div>
+  <div class="field">
+    转账金额：<input name="money" id="money" /><br />
+  </div>
+  <div class="actions">
+    <button type="submit">提交</button>
+  </div>
+<% end %>
+</fieldset>
+
+  
+</div>
+

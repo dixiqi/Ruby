@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Id:</b>
+  <%= @vip.id %>
+</p>
+
+<p>
+  <b>Integral:</b>
+  <%= @vip.integral %>
+</p>
+
+<p>
+  <b>User:</b>
+  <%= @vip.user_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_vip_path(@vip) %> |
+<%= link_to 'Back', vips_path %>

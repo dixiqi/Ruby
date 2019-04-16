@@ -1,0 +1,32 @@
+@charset "utf-8";
+
+body{
+	padding:0;
+	margin:0;
+}
+
+#fl{
+	background:url(../images/fl_bg.jpg);
+	width:680px;
+	height:585px;
+	padding:115px 0 0 240px;
+	font-size:13px;
+}
+
+#fl table{
+	width:550px;
+	border:solid 1px #8CBDEF;
+	background:#CDE2F8;
+}
+#fl table thead td,#fl table thead th{
+	background:#8CBDEF;
+	font-size:14px;
+	font-weight:700;
+	padding:5px;
+	text-align:center;
+	color:#fff;
+}
+#fl table tbody td{
+	background:#fff;
+	padding:3px;
+}

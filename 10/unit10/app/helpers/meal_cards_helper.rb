@@ -1,0 +1,2 @@
+module MealCardsHelper
+end

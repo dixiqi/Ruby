@@ -1,0 +1,35 @@
+
+<div id="fl">
+  
+<table>
+  <thead>
+    <tr>
+      <th>分类编号</th>
+      <th>产品分类</th>
+      <th>产品名称</th>
+      <th>产品价格</th>
+      <th>型号</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% temp_id = 0 %>
+    <% @types.each do |type| %>
+    <% type.products.each do|p| %>
+    <tr>
+      <%if(temp_id != type.id)
+         temp_id = type.id %>
+          <td rowspan="<%= type.products.size %>"><%= type.id %></td>
+          <td rowspan="<%= type.products.size %>"><%= type.name %></td>
+      <% end %>
+
+      <td><%= p.name %></td>
+      <td><%= p.model %></td>
+      <td><%= p.price %>￥</td>
+    </tr>
+    <% end %>
+  <% end %>
+  </tbody>
+</table>
+
+</div>
+

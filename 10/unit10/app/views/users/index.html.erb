@@ -1,0 +1,21 @@
+<h1>用户列表</h1>
+
+<table>
+  <tr>
+    <th>编号</th>
+    <th>姓名</th>
+    <th>是否是会员</th>
+    <th>会员编号</th>
+    <th>会员积分</th>
+  </tr>
+
+<% @users.each do |user| %>
+  <tr>
+    <td><%= user.id %></td>
+    <td><%= user.name %></td>
+    <td><%= user.vip == nil ? "否" : "是" %></td>
+    <td><%= user.vip.id if user.vip != nil %></td>
+    <td><%= user.vip.integral  if user.vip != nil %></td>
+  </tr>
+<% end %>
+</table>

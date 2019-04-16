@@ -1,0 +1,29 @@
+<%= form_for(@vip) do |f| %>
+  <% if @vip.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@vip.errors.count, "error") %> prohibited this vip from being saved:</h2>
+
+      <ul>
+      <% @vip.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :id %><br />
+    <%= f.text_field :id %>
+  </div>
+  <div class="field">
+    <%= f.label :integral %><br />
+    <%= f.text_field :integral %>
+  </div>
+  <div class="field">
+    <%= f.label :user_id %><br />
+    <%= f.text_field :user_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

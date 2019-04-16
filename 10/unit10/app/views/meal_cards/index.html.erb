@@ -1,0 +1,27 @@
+
+<div id="meal_card">
+<table cellspacing="1">
+  <thead>
+  <tr>
+    <td>卡号</td>
+    <td>名称</td>
+    <td>学号</td>
+    <td>班级</td>
+    <td>压金</td>
+    <td>卡内余额</td>
+  </tr>
+  </thead>
+  <tbody>
+<% @meal_cards.each do |meal_card| %>
+  <tr>
+    <td><%= meal_card.number %></td>
+    <td><%= meal_card.student.name %></td>
+    <td><%= meal_card.student.number %></td>
+    <td><%= meal_card.student.klass %></td>
+    <td><%= meal_card.sicherheit %></td>
+    <td><%= meal_card.balance %></td>
+  </tr>
+<% end %>
+  </tbody>
+</table>
+</div>

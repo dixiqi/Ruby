@@ -1,0 +1,49 @@
+@charset "utf-8";
+
+body{
+	border:0;
+	margin:0;
+}
+
+#bank{
+	width:590px;
+	height:490px;
+	background:url(../images/bank_bg.jpg);
+	padding:110px 0 0 210px;
+}
+
+#bank table{
+	width:500px;
+	background:#0BC513;
+}
+
+#bank table td{
+	text-align:center;
+	border-collapse:0;
+	border-spacing:0;
+}
+
+#bank table thead td{
+	font-size:14px;
+	font-weight:700;
+	color:#555;
+	background:#A7F9AA;
+	padding:5px;
+}
+
+#bank table tbody td{
+	font-size:13px;
+	color:#555;
+	background:#fff;
+	padding:3px;
+}
+
+fieldset{
+    width:500px;
+	font-size:13px;
+	line-height:30px;
+	padding:20px;
+}
+fieldset legend{
+	margin-bottom:10px;
+}

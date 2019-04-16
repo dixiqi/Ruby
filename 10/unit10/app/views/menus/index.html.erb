@@ -1,0 +1,29 @@
+
+<div id="bbs">
+
+<script type="text/javascript" src="javascripts/dtree.js"></script>
+<%
+   def each_child(menu)
+       if(menu.nil? or menu.childs.nil?)
+           return;
+       end %>
+        <%= "d.add(#{menu.id},#{menu.parent_id.nil? ? "0" : menu.parent_id},'#{menu.name}','#{menu.url}','','','','',true);" %>
+        <%
+       menu.childs.each do |m|
+           each_child(m);
+       end
+   end
+%>
+
+<script type="text/javascript">
+d = new dTree('dTree');
+d.add(0,-1,'论坛首页');
+<%
+   @menus.each do |m|
+    each_child(m)
+   end
+%>
+document.write(d);
+</script>
+
+</div>

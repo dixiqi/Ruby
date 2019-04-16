@@ -1,0 +1,32 @@
+@charset "utf-8";
+
+body{
+	padding:0;
+	margin:0;
+}
+
+#rule{
+	background:url(../images/role_bg.jpg);
+	width:680px;
+	height:585px;
+	padding:90px 0 0 200px;
+	font-size:13px;
+}
+
+#rule table{
+	width:650px;
+	border:solid 1px #8CBDEF;
+	background:#CDE2F8;
+}
+#rule table thead td,#rule table thead th{
+	background:#8CBDEF;
+	font-size:14px;
+	font-weight:700;
+	padding:5px;
+	text-align:center;
+	color:#fff;
+}
+#rule table tbody td{
+	background:#fff;
+	padding:3px;
+}

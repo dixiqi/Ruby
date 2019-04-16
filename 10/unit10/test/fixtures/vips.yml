@@ -1,0 +1,11 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  id: 
+  integral: 
+  user_id: 
+
+two:
+  id: 
+  integral: 
+  user_id: 

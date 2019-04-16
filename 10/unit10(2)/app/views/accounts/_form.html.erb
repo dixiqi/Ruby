@@ -1,0 +1,31 @@
+
+<div id="login">
+  
+<%= form_for(@account) do |f| %>
+  <table >
+    <tr>
+      <td>用户账号</td>
+      <td class=""><%= f.text_field :name %></td>
+      <td rowspan="2"><%= f.submit(:type => "image", :src => "/images/btn.jpg") %></td>
+    </tr>
+    <tr>
+      <td>用户密码</td>
+      <td class=""><%= f.text_field :password %></td>
+    </tr>
+    <tr>
+      <td colspan="3"><br><br>
+      <% if @account.errors.any? %>
+        <div id="error_explanation">
+          <ul>
+          <% @account.errors.full_messages.each do |msg| %>
+            <li><%= msg %></li>
+          <% end %>
+          </ul>
+        </div>
+      <% end %>
+      </td>
+    </tr>
+  </table>
+<% end %>
+
+</div>

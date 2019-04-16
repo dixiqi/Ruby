@@ -1,0 +1,28 @@
+<div id="rule">
+<table>
+  <thead>
+  <tr>
+    <td>编号</td>
+    <td>名称</td>
+    <td>功能编号</td>
+    <td>功能名称</td>
+  </tr>
+  </thead>
+  <tbody>
+<% temp_id = 0 %>
+<% @roles.each do |role| %>
+  <% role.functions.each do |f| %>
+  <tr>
+    <%if(temp_id != role.id)
+       temp_id = role.id %>
+      <td rowspan="<%= role.functions.size %>"><%= role.id %></td>
+      <td rowspan="<%= role.functions.size %>"><%= role.name %></td>
+    <% end %>
+    <td><%= f.number %></td>
+    <td><%= f.name %></td>
+  </tr>
+  <% end %>
+<% end %>
+</tbody>
+</table>
+</div>

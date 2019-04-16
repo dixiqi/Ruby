@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Id:</b>
+  <%= @function.id %>
+</p>
+
+<p>
+  <b>Name:</b>
+  <%= @function.name %>
+</p>
+
+<p>
+  <b>Number:</b>
+  <%= @function.number %>
+</p>
+
+
+<%= link_to 'Edit', edit_function_path(@function) %> |
+<%= link_to 'Back', functions_path %>
