@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Id:</b>
+  <%= @attach.id %>
+</p>
+
+<p>
+  <b>Name:</b>
+  <%= @attach.name %>
+</p>
+
+<p>
+  <b>Url:</b>
+  <%= @attach.url %>
+</p>
+
+<p>
+  <b>Types:</b>
+  <%= @attach.types %>
+</p>
+
+<p>
+  <b>Size:</b>
+  <%= @attach.size %>
+</p>
+
+<p>
+  <b>Last update:</b>
+  <%= @attach.last_update %>
+</p>
+
+
+<%= link_to 'Edit', edit_attach_path(@attach) %> |
+<%= link_to 'Back', attaches_path %>

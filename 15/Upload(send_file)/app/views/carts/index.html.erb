@@ -1,0 +1,34 @@
+<h1>Listing carts</h1>
+
+<table>
+  <tr>
+    <td>编号</td>
+    <td>名称</td>
+    <td>详细</td>
+    <td>展示</td>
+    <td>价格</td>
+    <td>操作</td>   
+  </tr>
+
+<% @carts.each do |cart| %>
+  <tr>
+    <td><%= cart.id %></td>
+    <td><%= cart.name %></td>
+    <td><%= cart.details %></td>
+    <td>
+      <img src="../images/<%= cart.img %>.jpg" width="50px" ></td>
+    <td><%= cart.price %></td>
+    <td><%= link_to '查看', cart %><br/>
+    <%= link_to '编辑', edit_cart_path(cart) %><br/>
+
+    <%= link_to '删除', cart, :confirm => 'Are you sure?', :method => :delete %>
+    <br/>
+       <%= link_to "下载文件" ,:action=> "downFile",:filename=>"#{cart.img}.jpg" %>
+    </td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Cart', new_cart_path %>

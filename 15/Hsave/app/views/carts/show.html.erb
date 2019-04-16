@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+<p>
+  <b>编号:</b>
+  <%= @cart.id %>
+</p>
+<p>
+  <b>名称:</b>
+  <%= @cart.name %>
+</p>
+<p>
+  <b>图书:</b>
+  <img src="../images/<%= @cart.img %>.jpg">
+</p>
+<p>
+  <b>价格:</b>
+  <%= @cart.price %>
+</p>
+<%= link_to '确定', edit_cart_path(@cart) %> |
+<%= link_to '返回', carts_path %>

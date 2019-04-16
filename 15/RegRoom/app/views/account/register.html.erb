@@ -1,0 +1,26 @@
+<h1>注册成为会员</h1>
+<% form_for :user,@user, :url=>{:action=>"proReg" } do |f| %>
+<table height="250px;" align="center">
+  <tr>
+    <td>您的昵称：</td>
+    <td><%=f.text_field :name %></td>
+  </tr>
+  <tr>
+     <td>您的密码：</td>
+ <td><%=f.text_field :pass %></td>
+  </tr>
+    <tr>
+     <td>重复密码：</td>
+     <td><input type="text" size="30"></td>
+  </tr>
+<tr>
+    <td>您的邮箱：</td>
+  <td><%=f.text_field :email %></td>
+</tr>
+  <tr>
+    <td colspan="2" align="center">
+      <%=submit_tag '注册'  %>
+    </td>
+  </tr>
+</table>
+<% end %>

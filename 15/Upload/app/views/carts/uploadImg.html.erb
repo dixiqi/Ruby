@@ -1,0 +1,14 @@
+<p>请选择您要上传的文件</p>
+<div>
+  <% form_tag "/carts/upload",:multipart => true do %>
+  <%= file_field_tag(:img,:size=>"40") %>
+      <%= submit_tag("上传文件") %>
+  <% end %>
+  <br/>
+  <br/>
+
+  <p>
+  <hr>
+  </p>
+  <p><h3><%= notice %></h3></p>
+</div>

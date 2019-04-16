@@ -1,0 +1,17 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  id: 
+  name: 
+  url: 
+  types: 
+  size: 
+  last_update: 
+
+two:
+  id: 
+  name: 
+  url: 
+  types: 
+  size: 
+  last_update: 

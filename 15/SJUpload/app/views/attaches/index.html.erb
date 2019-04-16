@@ -1,0 +1,25 @@
+<table border="1px" width="450px">
+  <tr>
+    <td>编号</td>
+    <td>名称</td>
+    <td>类型</td>
+    <td>上传时间</td>
+  </tr>
+
+  <% @attaches.each do |attach| %>
+  <tr>
+    <td><%= attach.id %></td>
+    <td><%= attach.name %></td>
+    <td><%= attach.types %></td>
+    <td><%= attach.last_update %></td>   
+  </tr>
+<% end %>
+</table>
+
+<h1>文件上传</h1>
+<% form_tag "/attaches/add", :multipart => true do %>
+请选择您要上传的文件：<%= file_field_tag "uploadFile" %> <br/><br/>
+<%= submit_tag "文件上传", :disable_with => "文件上传中..." , :name => "btnSave", :id => "btnSave" %>
+    <hr>
+    <p><h3><%=notice  %></h3></p>
+<% end %>
