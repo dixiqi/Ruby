@@ -1,0 +1,53 @@
+.bg {
+	background-image:url(../img/login.jpg);
+	background-repeat:no-repeat;
+	width:602px;
+	height:309px;
+}
+#apDiv2 {
+	position:relative;
+	padding-left:400px;
+	padding-top:120px;
+}
+#apDiv3 {
+	position:relative;
+	padding-left:350px;
+	padding-top:20px;
+}
+
+input {
+	background-color:#E8EcF8;
+	color:red;
+	border:thin solid #798DB9;
+	font:0.9em Arial , Helvetica,sans-serif;
+	padding:0.2em;
+	height:12px;
+}
+.txt {
+	background-color:#E8EcF8;
+	color:red;
+	border:thin solid #798DB9;
+	font:0.9em Arial , Helvetica,sans-serif;
+	padding:0.2em;
+	height:15px;
+  width:155px;
+}
+.btn1{
+	background-image:url(../img/tb1.jpg);
+	background-repeat:no-repeat;
+	width:81px;
+	height:25px;}
+
+.btn2{
+	background-image:url(../img/tb2.jpg);
+	background-repeat:no-repeat;
+	width:82px;
+	height:26px;}
+#apDivbtn {
+	position:relative;
+	padding-left:340px;
+	padding-top:10px;
+}
+#apDivtab {
+	height:8px;
+}

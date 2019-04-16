@@ -1,0 +1,59 @@
+form {
+	padding:0px;
+}
+input.txt {
+	background-color:#e1f4ee;
+	color:red;
+	border:solid 1px #C6EAE8;
+  width:150px;
+}
+
+bg{
+  background-image:../images/http_imgload20.jpg;
+}
+
+
+
+input.btn{
+	background-color:#FFF;
+	border:solid 1px #C6EAE8;
+	}
+select {
+	background-color:#e1f4ee;
+}
+.style2 {
+	COLOR: #003366
+}
+.style3 {
+	COLOR: #ffffff
+}
+.style4 {
+	FONT-WEIGHT: bold;
+	COLOR: #3d7acd
+}
+BODY {
+	BACKGROUND-COLOR: #417bc9
+}
+.STYLE5 {
+	FONT-WEIGHT: bold;
+	COLOR: #ffffff
+}
+.STYLE6 {
+	COLOR: #ffffff
+}
+
+.tableCss{
+	border-bottom-color:#69F;
+	border-bottom-style:solid;
+	border-bottom-width:1px;
+	padding-top:5px;}
+
+.bg1{ background-image:url(../images/rbSnap2.jpg);
+background-repeat:no-repeat;
+}
+
+#apDiv1 {
+	position:relative;
+	padding-left: 15px;
+	padding-top: 190px;
+}

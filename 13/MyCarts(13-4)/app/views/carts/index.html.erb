@@ -1,0 +1,28 @@
+<h1>图书列表</h1>
+<table width="500px">
+  <tr>
+    <td>编号</td>
+    <td>名称</td>
+    <td>图书</td>
+    <td>价格</td>
+    <td>操作</td>
+
+    <td><%=@pclass  %></td><td><%=@pname  %></td>
+  </tr>
+      <% @carts.each do |cart| %>
+      <tr>
+    <td><%= cart.id %></td>
+    <td><%= cart.name %></td>
+
+    <td><img src="../images/<%= cart.img %>.jpg" alt="完美嫁衣" width="50px" ></td>
+    <td><%= cart.price %></td>
+    <td>   <%= link_to '编辑', edit_cart_path(cart) %> <br>
+    <%= link_to '删除', cart, :confirm => 'Are you sure?', :method => :delete %> <br>
+     <%=link_to "添加到购物车", {:action => 'add_to_cart', :id => cart }  %> <br> 
+    </td>
+  </tr>
+  <% end %>
+</table>
+<br />
+<%= link_to '添加图书', new_cart_path %>
+<%=link_to "查看购物车", :action => "checkout"  %>

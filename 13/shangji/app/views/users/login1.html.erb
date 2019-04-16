@@ -1,0 +1,17 @@
+<%form_tag :action=>:login do %>
+    <div class="bg">
+    <div id="apDiv2">
+    <%= text_field :user,:name ,:class=>"txt"%>
+    <div id="apDivtab"></div>
+<%= text_field :user,:pass  ,:class=>"txt"%>
+  </div>
+  <div id="apDiv3">
+<%= submit_tag ' ',:class=>"btn1"%>
+  &nbsp;&nbsp;
+ <%= submit_tag ' ',:class=>"btn2"%>
+  </div>
+      <div style="color:red; padding-left:220px; padding-top:12px;">
+      <%=@uname  %><h2><%=notice  %></h2>
+        </div>
+        </div>
+<%end%>

@@ -1,0 +1,25 @@
+<h1>商品列表</h1>
+<table border="1px" cellpadding="0" cellspacing="0"  width="450px">
+  <tr>
+    <td>展示</td>
+    <td>编号</td>
+    <td>名称</td>
+    <td>数量</td>
+    <td>价格</td>
+    <td>操作</td>
+  </tr>
+<% @cart_shop.each do|cart,amount| %>
+      <tr>
+      <td><img src="../images/<%=cart.img  %>.jpg" alt="展示" width="50px" ></td>
+      <td><%= cart.id %></td>
+      <td><%=cart.name  %></td>
+      <td><%=amount %></td>
+      <td><%= @total %></td>
+        <td><%=link_to "查看详细信息", {:action => 'showDetails', :id => cart.id }  %></td>
+      </tr>
+  <% end %>
+    </table>
+<%=link_to "清空购物车", :action => "empty_cart"  %>
+
+
+

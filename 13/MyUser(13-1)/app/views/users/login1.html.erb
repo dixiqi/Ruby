@@ -1,0 +1,59 @@
+﻿<%form_tag :action=>:login  do %>
+<div id="apDiv1">
+<TABLE height=252 cellSpacing=0 cellPadding=0 width=432 align=center border=0>
+    <TBODY>
+      <TR>
+        <TD align=middle background=../images/login.files/Login_Top.gif height=26><TABLE cellSpacing=0 cellPadding=0 width=300 border=0>
+            <TBODY>
+              <TR>
+                <TD vAlign=bottom align=middle height=18><SPAN
+            class=STYLE5>网软天下公司企业网站管理系统</SPAN></TD>
+              </TR>
+            </TBODY>
+          </TABLE></TD>
+      </TR>
+      <TR>
+        <TD align=middle background=../images/login.files/Login_BG.gif><TABLE height=147 width=400 border=0>
+            <TBODY>
+              <TR>
+                <TD align=right width=147 rowSpan=4><IMG height=130 alt=2
+            src="../images/login.files/Login_TT.jpg" width=132></TD>
+                <TD align=right height=30>系　统：</TD>
+                <TD align=middle width=179 colSpan=2 height=30><select style="width:150px;">
+                    <option>普通管理员</option>
+                    <option>高级管理员</option>
+                    <option>系统管理员</option>
+                  </select></TD>
+              </TR>
+              <TR>
+                <TD align=right height=30>用户名：</TD>
+                <TD align=middle colSpan=2 height=30><%= text_field :user,:name,:class=>"txt" %></TD>
+              </TR>
+              <TR>
+                <TD align=right height=30>密　码：</TD>
+                <TD align=middle colSpan=2 height=30><%= text_field :user,:pass ,:class=>"txt"%></TD>
+              </TR>
+              <TR>
+                <TD colspan="2">&nbsp;&nbsp;
+                   <%= submit_tag '登录',:class=>"btn",:value=>" 提 交 " %></TD>
+                <TD class=style2 >&nbsp;&nbsp;
+                <INPUT  type=reset value=" 取&nbsp;消 " class="btn" name=reset></TD>
+              </TR>
+            </TBODY>
+          </TABLE></TD>
+      </TR>
+      <TR>
+        <TD align=middle background=../images/login.files/Login_Down.gif height=56><TABLE width=400 border=0>
+            <TBODY>
+              <TR>
+                <TD width=144><SPAN class=STYLE6>默认用户名：admin</SPAN></TD>
+                <TD width=120><SPAN class=STYLE6>默认密码：admin</SPAN></TD>
+                <TD width=122><SPAN class=STYLE6>网软天下 </SPAN></TD>
+              </TR>
+            </TBODY>
+          </TABLE></TD>
+      </TR>
+    </TBODY>
+  </TABLE>
+<%end%>
+</div>

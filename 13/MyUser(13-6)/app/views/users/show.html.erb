@@ -1,0 +1,17 @@
+<div id="apDiv1">
+<p id="notice"><%= notice %></p>
+<p>
+  <b>编号:</b>
+  <%= @user.id %>
+</p>
+<p>
+  <b>用户名:</b>
+  <%= @user.name %>
+</p>
+<p>
+  <b>密码:</b>
+  <%= @user.pass %>
+</p>
+<%= link_to '编辑', edit_user_path(@user) %> |
+<%= link_to '返回', users_path %>
+</div>
