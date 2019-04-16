@@ -1,0 +1,22 @@
+
+
+<div class="topic">
+<!--创建时间和标题-->
+	<div class="topic_r">	发表于 <%= format_post_date(post.published_at) %></div>
+<%= link_to(post.title, post_path(post)) %>
+</div>
+<div class="postbody">
+  <%=raw post.body_html %>
+<!--正文结束-->
+
+<br/>
+<hr class="post"/>
+<!--其他-->
+<div class="postend">
+<%= link_to(pluralize(post.approved_comments.size, "comment"), post_path(post, :anchor => '评论')) %> | <% unless post.tags.empty? -%>
+    标签： <%= linked_tag_list(post.tags) %>    <% end -%> </div>
+</div>
+
+
+
+

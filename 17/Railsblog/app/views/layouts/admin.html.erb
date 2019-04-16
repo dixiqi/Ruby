@@ -1,0 +1,51 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+ <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title><%= enki_config[:title] %> - Admin</title>
+
+  <%= csrf_meta_tag %>
+
+  <%= javascript_include_tag 'jquery.js' %>
+  <%= javascript_include_tag 'jquery.livequery.js' %>
+  <%= javascript_include_tag 'jquery.form.js' %>
+  <%= javascript_include_tag 'jquery.easing.1.3.js' %>
+  <%= javascript_include_tag 'rails.js' %>
+  <%= javascript_include_tag 'humanmsg' %>
+  <%= javascript_include_tag 'admin/shortcut' %>
+  <%= javascript_include_tag 'admin/common' %>
+
+  <%= stylesheet_link_tag 'formtastic' %>
+  <%= stylesheet_link_tag 'humanmsg' %>
+  <%= stylesheet_link_tag 'admin' %>
+  <%= yield(:head) %>
+
+  <% if flash[:notice] -%>
+  <script>
+    jQuery(document).ready(function() {
+      humanMsg.displayMsg('<%= escape_javascript(flash[:notice]) %>');
+    })
+  </script>
+  <% end -%>
+
+</head>
+<body>
+  <div id="page">
+    <div id="content">
+      <%= yield %>
+    </div>
+    <div id="nav">
+      <ul>
+        <li><%= nav_link_to("后台管理首页", admin_root_path,       :accesskey => '1') %></li>
+        <li><%= nav_link_to("随笔",     admin_posts_path,      :accesskey => '2') %> <%= nav_link_to("(+)", new_admin_post_path, :accesskey => 'n') %></li>
+        <li><%= nav_link_to("单页",     admin_pages_path,      :accesskey => '3') %> <%= nav_link_to("(+)", new_admin_page_path, :accesskey => 'p') %></li>
+        <li><%= nav_link_to("评论",  admin_comments_path,   :accesskey => '4') %></li>
+        <li><%= nav_link_to("回收站",   admin_undo_items_path, :accesskey => '5') %></li>
+        <li class="separator">&nbsp;</li>
+        <li><%= link_to("退出", admin_session_path, :accesskey => 'l', :method => :delete) %></li>
+        <li><%= link_to("返回站点", '/',             :accesskey => 'v', :title => '返回站点') %></li>
+      </ul>
+    </div>
+  </div>
+</body>
+</html>

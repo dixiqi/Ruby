@@ -1,0 +1,54 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title><%= html_title yield(:page_title) %></title>
+<%= csrf_meta_tag %>
+<%= stylesheet_link_tag 'application' %>
+<%= stylesheet_link_tag 'style.css' %>
+<%= javascript_include_tag 'jquery' %>
+<%= javascript_include_tag 'rails' %>
+<%= yield(:head) %>
+</head>
+<body>
+<div id="topnav">
+  <div style="margin-top:5px;"> <font style="font-weight : bold ;FONT-SIZE: 22px;line-height: normal;" face="Georgia,Times"> <a href="<%= root_url %>"><%= enki_config[:title] %></a> </font><br/>
+    <font style="padding-left:20px">道可道，非常道；名可名，非常名.... </font> </div>
+</div>
+<!--顶部结束-->
+<div id="navmenu">
+  <% page_links_for_navigation.each do |link| -%>
+  <%= link_to(link.name, link.url) %> |
+  <% end -%>
+</div>
+<!--栏目菜单结束-->
+<div id="leftmenu">
+  <div class="border1">
+    <div class="lefttitle">所有分类</div>
+    <div class="msg">
+      <ul class="msgtitlelist" >
+        <% category_links_for_navigation.each do |link| -%>
+        <li><%= link_to(link.name, link.url) %></li>
+        <% end -%>
+      </ul>
+    </div>
+  </div>
+  <div class="border1">
+    <div class="lefttitle">查询</div>
+    <div class="msg">
+      <input type="text" name="keyword" value="" size="25"/>
+      <br/>
+      <select name="stype">
+        <option value="-1">分类</option>
+        <option value="0" selected="selected">文章 </option>
+        <option value="1">相册</option>
+      </select>
+      <input type="button" value="查询" runat="server" id="Button1"/>
+    </div>
+  </div>
+</div>
+<!-- 页面主体 -->
+<div id="main"> <%= yield %> </div>
+<div id="footer"> <%= enki_config[:title] %> &#169; <%= enki_config[:author, :name] %> &nbsp; &nbsp; 2011 </div>
+</body>
+</html>

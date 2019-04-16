@@ -1,0 +1,14 @@
+<%= javascript_include_tag "ckeditor/ckeditor.js"%>
+<% content_for(:head) do -%>
+  <%= javascript_include_tag 'admin/edit-preview' %>
+<% end -%>
+
+<%= form.inputs do -%>
+  标题： <%= text_field :post,:title,:style=>"width:300px"%>
+    <%= ckeditor_textarea(:post,:body,:width=>"100%",:height=>"200px") %>
+    <br/> 提示：按下Ctrl+E可以切换预览和编辑状态<br/>
+    标签： <%= text_field :post,:tag_list,:style=>"width:300px"%>多个标签之间使用逗号分隔，例如（rails,web）<br/><br/>
+    发表时间： <%= text_field :published_at_natural,:title,:style=>"width:300px",:value=>"now"%>now表示当前时间<br/><br/>
+    标识链接： <%= text_field :slug,:tag_list,:style=>"width:300px"%>链接此文章时使用的标识
+<% end -%>
+

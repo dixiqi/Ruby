@@ -1,0 +1,10 @@
+<%= javascript_include_tag "ckeditor/ckeditor.js"%>
+<%= javascript_include_tag 'admin/edit-preview' %>
+<% content_for(:head) do -%>
+<% end -%>
+<%= form.inputs do -%>
+    标题： <%= text_field :page,:title,:style=>"width:300px"%><br/>
+  链接： <%= text_field :page,:slug,:style=>"width:300px"%>链接此文章时使用的标识
+    <%= ckeditor_textarea(:page,:body,:width=>"100%",:height=>"200px") %>
+    <br/> 提示：按下Ctrl+E可以切换预览和编辑状态
+<% end -%>

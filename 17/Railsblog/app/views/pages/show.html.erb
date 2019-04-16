@@ -1,0 +1,13 @@
+<% content_for(:page_title) do -%>
+<%= page_title(@page) -%>
+<% end -%>
+<!--当前位置-->
+<div class="channel_nav">  <img src="/images/076.gif" alt="" />
+<a href="/" title="返回首页">首页</a> >> 查看页面 >> <%= @page.title -%>
+    </div>
+<h2><%= @page.title -%></h2>
+<hr class="post"/><div class="postend">
+<div class="postbody">
+   <%=raw @page.body_html %>
+ </div>
+</div>
