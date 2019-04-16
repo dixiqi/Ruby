@@ -1,0 +1,9 @@
+﻿<p id="notice"><%= notice %></p>
+<fieldset>
+  <legend>查看文章详细信息</legend>
+  <br/>
+  <h2> 标题：<%= @article.title %></h2>
+  <p> 编号：<%= @article.id %> | 用户：<%= @article.name %> </p>
+  <p> <b>内容：</b> <%= @article.content %> </p>
+  <%= link_to '编辑内容', edit_article_path(@article) %> | <%= link_to '返回列表', articles_path %>
+</fieldset>
