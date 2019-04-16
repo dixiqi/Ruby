@@ -1,0 +1,29 @@
+<h1>人物信息列表</h1>
+
+<table>
+  <tr>
+    <th>编号</th>
+    <th>姓名</th>
+    <th>年龄</th>
+    <th>性别</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @people.each do |person| %>
+  <tr>
+    <td><%= person.id %></td>
+    <td><%= person.name %></td>
+    <td><%= person.age %></td>
+    <td><%= person.sex %></td>
+    <td><%= link_to '查看', person %></td>
+    <td><%= link_to '编辑', edit_person_path(person) %></td>
+    <td><%= link_to '删除', person, :confirm => '是否确定删除？', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to '新建人物信息', new_person_path %>

@@ -1,0 +1,20 @@
+
+<div id="logs">
+  
+<table cellpadding="3" border="1" cellspacing="0">
+<tr>
+  <td>编号</td>
+  <td>记录时间</td>
+  <td>日志信息</td>
+</tr>
+
+<% @logs.each do |log| %>
+  <tr>
+    <td><%= log.id %></td>
+    <td><%= log.record_time %></td>
+    <td><%= log.log %></td>
+  </tr>
+<% end %>
+</table>
+</div>
+

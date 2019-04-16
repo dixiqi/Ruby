@@ -1,0 +1,22 @@
+@charset "utf-8";
+/* CSS Document */
+
+body{
+	padding:0;
+	margin:0;
+}
+
+#logs{
+	background:url(../images/stu_log_bg.jpg);
+	padding:150px 0 0 230px;
+	height:450px;
+	width:550px;
+}
+
+#logs table{
+	width:530px;
+}
+
+#logs table td{
+	font-size:13px;
+}

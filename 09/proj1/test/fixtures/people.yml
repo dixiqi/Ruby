@@ -1,0 +1,13 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  id: 
+  name: 
+  age: 
+  sex: 
+
+two:
+  id: 
+  name: 
+  age: 
+  sex: 

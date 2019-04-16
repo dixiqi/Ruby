@@ -1,0 +1,26 @@
+<div id="durg">
+	<div class="button_line">
+      <%= link_to '删除所有过期药品',"durgs/0", :method => :delete %>
+    </div>
+    <table>
+    <thead>
+    <tr>
+    <td>编号</td><td>名称</td><td>规格</td><td>单位</td><td>库存</td><td>售价</td><td>过期时间</td>
+    </tr>
+    </thead>
+    <tbody>
+    <% @durgs.each do |durg| %>
+      <tr>
+        <td><%= durg.id %></td>
+        <td><%= durg.name %></td>
+        <td><%= durg.standard %></td>
+        <td><%= durg.unit %></td>
+        <td><%= durg.number %></td>
+        <td><%= durg.price %></td>
+        <td><%= durg.expiration %></td>
+      </tr>
+    <% end %>
+    </tbody>
+    </table>
+</div>
+

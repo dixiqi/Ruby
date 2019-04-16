@@ -1,0 +1,22 @@
+<%= form_for(@friend_link) do |f| %>
+    <tr>
+      <td><%= f.label "编号" %></td>
+      <td><%= @friend_link.id %></td>
+    </tr>
+    <tr>
+      <td><%= f.label "链接标题" %></td>
+      <td><%= f.text_field :title %></td></tr>
+    <tr>
+      <td><%= f.label "链接地址" %></td>
+      <td><%= f.text_field :url %></td>
+    </tr>
+    <tr>
+      <td><%= f.label "排序编号" %></td>
+      <td><%= f.text_field :taxis %></td>
+    </tr>
+    <tr>
+      <td><%= f.label "是否显示" %></td>
+      <td><%= f.text_field :isShow %></td>
+    </tr>
+    <tr><td colspan="2"><%= f.submit("更新") %></td></tr>
+<% end %>

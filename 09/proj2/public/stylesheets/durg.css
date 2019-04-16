@@ -1,0 +1,37 @@
+@charset "utf-8";
+/* CSS Document */
+
+body {
+	margin:0;
+	padding:0;
+}
+#durg {
+	width:630px;
+	height:600px;
+	padding:10px 0 0 170px;
+	background:url(../images/drug_bg.gif);
+	background-repeat:no-repeat;
+	font-size:13px;
+}
+.button_line {
+	text-align:right;
+	padding:5px 15px;
+}
+#durg table{
+	width:600px;
+	border:solid 1px #006CD5;
+	background:#CDE2F8;
+	margin:10px;
+}
+#durg table thead td{
+	background:#006CD5;
+	font-size:14px;
+	font-weight:700;
+	padding:5px;
+	text-align:center;
+	color:#fff;
+}
+#durg table tbody td{
+	background:#fff;
+	padding:3px;
+}

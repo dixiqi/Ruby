@@ -1,0 +1,45 @@
+<%= form_for(@durg) do |f| %>
+  <% if @durg.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@durg.errors.count, "error") %> prohibited this durg from being saved:</h2>
+
+      <ul>
+      <% @durg.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :id %><br />
+    <%= f.text_field :id %>
+  </div>
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :standard %><br />
+    <%= f.text_field :standard %>
+  </div>
+  <div class="field">
+    <%= f.label :unit %><br />
+    <%= f.text_field :unit %>
+  </div>
+  <div class="field">
+    <%= f.label :number %><br />
+    <%= f.text_field :number %>
+  </div>
+  <div class="field">
+    <%= f.label :price %><br />
+    <%= f.text_field :price %>
+  </div>
+  <div class="field">
+    <%= f.label :expiration %><br />
+    <%= f.datetime_select :expiration %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

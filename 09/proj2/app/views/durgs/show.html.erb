@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Id:</b>
+  <%= @durg.id %>
+</p>
+
+<p>
+  <b>Name:</b>
+  <%= @durg.name %>
+</p>
+
+<p>
+  <b>Standard:</b>
+  <%= @durg.standard %>
+</p>
+
+<p>
+  <b>Unit:</b>
+  <%= @durg.unit %>
+</p>
+
+<p>
+  <b>Number:</b>
+  <%= @durg.number %>
+</p>
+
+<p>
+  <b>Price:</b>
+  <%= @durg.price %>
+</p>
+
+<p>
+  <b>Expiration:</b>
+  <%= @durg.expiration %>
+</p>
+
+
+<%= link_to 'Edit', edit_durg_path(@durg) %> |
+<%= link_to 'Back', durgs_path %>

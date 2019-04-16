@@ -1,0 +1,22 @@
+<div id="hours">
+
+<table cellspacing="1">
+<thead>
+<tr><td>编号</td><td>地段</td><td>小区名</td><td>户型</td><td>面积</td><td>价格</td></tr>
+</thead>
+<tbody>
+<% @houses.each do |house| %>
+  <tr>
+    <td><%= house.id %></td>
+    <td><%= house.location %></td>
+    <td><%= house.subdistrict %></td>
+    <td><%= house.housing_type %></td>
+    <td><%= house.acreage %> 平米</td>
+    <td><%= house.price %> 万元</td>
+  </tr>
+<% end %>
+</tbody>
+</table>
+<br>
+<div><%= "从数据库中查询到 #@number 条记录" %></div>
+</div>

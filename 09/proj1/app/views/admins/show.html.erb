@@ -1,0 +1,45 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Id:</b>
+  <%= @admin.id %>
+</p>
+
+<p>
+  <b>Login name:</b>
+  <%= @admin.login_name %>
+</p>
+
+<p>
+  <b>Password:</b>
+  <%= @admin.password %>
+</p>
+
+<p>
+  <b>Username:</b>
+  <%= @admin.username %>
+</p>
+
+<p>
+  <b>Role:</b>
+  <%= @admin.role %>
+</p>
+
+<p>
+  <b>Last login time:</b>
+  <%= @admin.last_login_time %>
+</p>
+
+<p>
+  <b>Login count:</b>
+  <%= @admin.login_count %>
+</p>
+
+<p>
+  <b>State:</b>
+  <%= @admin.state %>
+</p>
+
+
+<%= link_to 'Edit', edit_admin_path(@admin) %> |
+<%= link_to 'Back', admins_path %>

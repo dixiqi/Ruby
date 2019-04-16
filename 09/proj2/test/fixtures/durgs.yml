@@ -1,0 +1,19 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  id: 
+  name: 
+  standard: 
+  unit: 
+  number: 
+  price: 
+  expiration: 2011-01-20 18:33:43
+
+two:
+  id: 
+  name: 
+  standard: 
+  unit: 
+  number: 
+  price: 
+  expiration: 2011-01-20 18:33:43

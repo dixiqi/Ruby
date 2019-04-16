@@ -1,0 +1,33 @@
+@charset "utf-8";
+/* CSS Document */
+
+body{ padding:0; margin:0; }
+
+#hours{
+	height:602px;
+	width:533px;
+	background:url(../images/hours.jpg);
+	padding:80px 0 0 250px;
+}
+
+#hours table{
+	width:520px;
+	background-color:#c55;
+	border:solid 2px #c55;
+}
+
+#hours table tr td{
+	padding:4px;
+	text-align:center;
+}
+#hours table thead tr{
+	background:url(../images/tbl_title_bg.jpg);
+	height:14px;
+	font-size:14px;
+	font-weight:700;
+}
+
+
+#hours table tbody tr td{
+	background:#fff;
+}

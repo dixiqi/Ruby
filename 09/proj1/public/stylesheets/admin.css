@@ -1,0 +1,10 @@
+body{
+    background:url(../images/admin_bg.jpg)
+}
+
+#body_content{
+    margin:120px 0 0 200px;
+}
+#body_content table thead{
+    background:#507DD2;
+}

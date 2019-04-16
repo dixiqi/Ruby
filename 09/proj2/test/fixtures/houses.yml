@@ -1,0 +1,17 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  id: 
+  location: 
+  subdistrict: 
+  housing_type: 
+  acreage: 
+  price: 1.5
+
+two:
+  id: 
+  location: 
+  subdistrict: 
+  housing_type: 
+  acreage: 
+  price: 1.5

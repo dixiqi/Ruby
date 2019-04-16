@@ -1,0 +1,30 @@
+@charset "utf-8";
+
+#body{
+	width:650px;
+	height:380px;
+	background:url(../images/search_bg.jpg);
+	padding:60px 0 0 250px;
+}
+
+#body table thead tr{
+	background:url(../images/title_bg.gif);
+}
+#body table{
+	width:650px;
+}
+
+#body table thead tr td{
+	height:16px;
+	padding:8px;
+	color:#009D37;
+	font-size:14px;
+	font-weight:700;
+	text-align:center;
+}
+
+#body table tbody tr td{
+	border-bottom:solid 1px #aaa;
+	padding:3px;
+	font-size:13px;
+}

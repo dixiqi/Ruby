@@ -1,0 +1,21 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  id: 
+  login_name: 
+  password: 
+  username: 
+  role: 
+  last_login_time: 2011-01-14 15:04:27
+  login_count: 
+  state: 
+
+two:
+  id: 
+  login_name: 
+  password: 
+  username: 
+  role: 
+  last_login_time: 2011-01-14 15:04:27
+  login_count: 
+  state: 

@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Id:</b>
+  <%= @friend_link.id %>
+</p>
+
+<p>
+  <b>Title:</b>
+  <%= @friend_link.title %>
+</p>
+
+<p>
+  <b>Url:</b>
+  <%= @friend_link.url %>
+</p>
+
+<p>
+  <b>Taxis:</b>
+  <%= @friend_link.taxis %>
+</p>
+
+<p>
+  <b>Isshow:</b>
+  <%= @friend_link.isShow %>
+</p>
+
+
+<%= link_to 'Edit', edit_friend_link_path(@friend_link) %> |
+<%= link_to 'Back', friend_links_path %>
